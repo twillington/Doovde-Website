@@ -1,0 +1,88 @@
+<html>
+<head>
+	<title>Doovdé</title>
+
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="./css/metro.css" rel="stylesheet"/>
+	<link href="./css/metro-schemes.css" rel="stylesheet"/>
+	<link href="./css/metro-responsive.css" rel="stylesheet"/>
+	<link href="./css/metro-icons.css" rel="stylesheet"/>
+
+	<link rel="icon" type="image/png" href="./images/doovde2.png" />
+	<link href="./css/style.css" rel="stylesheet"/>
+	<style> body {background-image: src="./images/background.png";} </style>
+	<style>
+		.login-form {
+			width: 25rem;
+			height: 18.75rem;
+			position: fixed;
+			top: 50%;
+			margin-top: -9.375rem;
+			left: 50%;
+			margin-left: -12.5rem;
+			background-color: #ffffff;
+			opacity: 0;
+			-webkit-transform: scale(.8);
+			transform: scale(.8);
+		}
+	</style>
+</head>
+
+<body>
+
+
+
+<div class="app-bar green bg-darkGreen">
+	<a class="app-bar-element bg-hover-darkEmerald"><img src="./images/doovde1.png" style= "height:100%"/></a>
+</div>
+
+<div class="padding20" style="width:95%; margin:0 auto; height:83.9%">
+	<div class=".login-form">
+		<form>
+			<h1 class="text-light">Login to service</h1>
+
+			<hr class="thin"/>
+			<br />
+			<div class="input-control text full-size" data-role="input">
+				<label for="user_login">User email:</label>
+				<input type="text" name="user_login" id="user_login">
+				<button class="button helper-button clear"><span class="mif-cross"></span></button>
+			</div>
+			<br />
+			<br />
+			<div class="input-control password full-size" data-role="input">
+				<label for="user_password">User password:</label>
+				<input type="password" name="user_password" id="user_password">
+				<button class="button helper-button reveal"><span class="mif-looks"></span></button>
+			</div>
+			<br />
+			<br />
+			<div class="form-actions">
+				<a href="home.php"><h1>Login</h1></a>
+				<br />
+
+				<hr class="thin"/>
+
+				<h1 class="text-light">Not a member?</h1>
+				<button type="submit" class="button primary bg-darkGreen">Register here</button>
+
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="footer bg-darkGreen fg-white" style="height:3rem;">
+	<div style="width:80%; margin:0 auto;">
+		<br/>
+		Last Edited on 19/11/2015 | ©2011 mydomain.com All Rights Reserved | Created by Tom Willington
+	</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="./js/metro.js"></script>
+</body>
+</html>

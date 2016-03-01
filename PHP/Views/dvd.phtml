@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Doovdé</title>
+        
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="./css/metro.css" rel="stylesheet"/>
+        <link href="./css/metro-schemes.css" rel="stylesheet"/>
+        <link href="./css/metro-responsive.css" rel="stylesheet"/>
+        <link href="./css/metro-icons.css" rel="stylesheet"/>
+		
+        <link rel="icon" type="image/png" href="./images/doovde2.png" />
+        <link href="./css/style.css" rel="stylesheet"/>
+		<style> body {background-image: src="./images/background.png";} </style>
+
+    </head>
+    
+    <body>
+	<div class="app-bar green bg-darkGreen">
+				<a class="app-bar-element bg-hover-darkEmerald" href="home.php"><img src="./images/doovde1.png" style= "height:100%"/></a>
+				<span class="app-bar-divider bg-darkEmerald"></span>
+						<ul class="app-bar-menu">
+							<li>
+								<a href="" class="dropdown-toggle bg-hover-darkEmerald ol-darkEmerald">Movies</a>
+								<ul class="d-menu ol-darkEmerald" data-role="dropdown">
+									<li><a href="titles.php">Titles</a></li>
+									<li><a href="directors.php">Directors</a></li>
+									<li><a href="genres.php">Genres</a></li>
+									<li class="divider"></li>
+									<li><a href=""><span class="mif-search "></span> Search For...</a></li>
+								</ul>
+							</li>
+							<li><a href="help.php" class="bg-hover-darkEmerald">Help</a></li>
+						</ul>
+						
+						<ul class="app-bar-menu place-right">
+							<li><a href="" class="dropdown-toggle bg-hover-darkEmerald"><span class="mif-user "></span>  My Account</a>
+								<ul class="d-menu" data-role="dropdown">
+									<li><a href="">My Basket</a></li>
+									<li><a href="index.php">Log Out</a></li>
+								</ul>
+							</li>
+						</ul>
+			</div>
+        
+        <div class="padding20" style="width:95%; margin:0 auto; height:85.3%">
+				
+				<div class="imagetitle" style="float:left">
+						
+						<img src="../images/dvd/<?php echo $view->dvd->getId();?>.png"/>
+							
+						
+				</div>
+
+				<div class="info" style=" margin:1% 30%; ">
+					<h1><?php echo $view->dvd->getTitle(); ?></h1>
+							<b> Starring: </b> <?php $i =0; foreach ($view->dvd->getActors() as $actor)
+								{
+									if ($i!=0)
+									{echo ',';
+									}
+									echo $actor['Name'];
+									$i++;
+								}
+								?> <br/>
+							<b> Director:</b> <?php echo $view->dvd->getDirector()['Name']; ?> <br/>
+							<b> Run Time: </b> <?php echo $view->dvd->getRunTime(); echo "mins";?> <br/>
+							<b> Price: </b> <?php echo $view->dvd->getPrice(); ?><br/>
+							<b> IMDB Rating: </b> <?php echo $view->dvd->getIMDBRating(); ?><br/>
+							<b> Released: </b> <?php echo $view->dvd->getReleaseYear(); ?><br/>
+							<b> Synopsis: </b> <?php echo $view->dvd->getSynopsis(); ?><br/>
+							<b> Add to Basket: </b> <br/>
+							<button class="button"><span class="mif-checkmark"></span> Add to Basket</button>
+				</div>		
+				
+        </div>
+        
+        <div class="footer bg-darkGreen fg-white" style="height:3rem;">
+            <div style="width:80%; margin:0 auto;">
+                <br/>
+                Last Edited on 19/11/2015 | ©2011 mydomain.com All Rights Reserved | Created by Tom Willington 
+            </div>
+        </div>
+        
+        
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="./js/metro.js"></script>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Doovdé</title>
+        
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="./css/metro.css" rel="stylesheet"/>
+        <link href="./css/metro-schemes.css" rel="stylesheet"/>
+        <link href="./css/metro-responsive.css" rel="stylesheet"/>
+        <link href="./css/metro-icons.css" rel="stylesheet"/>
+		
+        <link rel="icon" type="image/png" href="./images/doovde2.png" />
+        <link href="./css/style.css" rel="stylesheet"/>
+		<style>
+			body {background-image: src="../images/background.jpg";}
+
+		</style>
+    </head>
+    
+    <body>
+	<div class="wrapper">
+		<div class="app-bar green bg-darkGreen">
+					<a class="app-bar-element bg-hover-darkEmerald" href="home.php"><img src="./images/doovde1.png" style= "height:100%"/></a>
+					<span class="app-bar-divider"></span>
+							<ul class="app-bar-menu">
+								<li>
+									<a href="" class="dropdown-toggle bg-hover-darkEmerald">Movies</a>
+									<ul class="d-menu" data-role="dropdown">
+										<li><a href="titles.php">Titles</a></li>
+										<li><a href="directors.php">Directors</a></li>
+										<li><a href="genres.php">Genres</a></li>
+										<li class="divider"></li>
+										<li><a href=""><span class="mif-search "></span> Search For...</a></li>
+									</ul>
+								</li>
+								<li><a href="help.php" class="bg-hover-darkEmerald">Help</a></li>
+							</ul>
+
+							<ul class="app-bar-menu place-right">
+								<li><a href="" class="dropdown-toggle bg-hover-darkEmerald"><span class="mif-user "></span>  My Account</a>
+									<ul class="d-menu" data-role="dropdown">
+										<li><a href="">My Basket</a></li>
+										<li><a href="index.php">Log Out</a></li>
+									</ul>
+								</li>
+							</ul>
+				</div>
+
+			<div class="padding20" style="width:95%; margin:0 auto; height:83.8%">
+					<div class="grid" style="width:100%">
+						<?php
+						$i = 0;
+
+						foreach($dvds as $dvd)
+						{
+							if($i % 8 == 0) {
+								if ($i != 0) {
+									echo '</div>';
+								}
+								echo '<div class="row cells8">';
+							}
+							echo '<div class="cell"><a href="dvd.php?id='.$dvd['id'].'"><img src="../images/dvd/'.$dvd['id'].'.png" height="215" alt="Image not found!" /></a></div>';
+							$i++;
+						}
+						?>
+					</div>
+			</div>
+
+
+
+
+			</div>
+
+			<div class="footer bg-darkGreen fg-white" style="height:3rem;">
+				<div style="width:90%; margin:0 auto;">
+					<br/>
+					Last Edited on 19/11/2015 | ©2011 mydomain.com All Rights Reserved | Created by Tom Willington
+				</div>
+			</div>
+	</div>
+        
+        
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="./js/metro.js"></script>
+    </body>
+</html>
